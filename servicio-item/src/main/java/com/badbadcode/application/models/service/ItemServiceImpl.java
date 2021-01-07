@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import com.badbadcode.application.models.entity.Item;
 import com.badbadcode.application.models.entity.Producto;
 
-@Service
+@Service("serviceRestTemplate")
 public class ItemServiceImpl implements ItemService{
 
 	@Autowired
@@ -22,7 +22,7 @@ public class ItemServiceImpl implements ItemService{
 	@Override
 	public List<Item> findAll() {
 		
-		List<Producto> productos = Arrays.asList(clienteRest.getForObject("http://localhost:8001/listar", Producto[].class));
+		List<Producto> productos = Arrays.asList(clienteRest.getForObject("http://servicio-producto/listar", Producto[].class));
 		
 		return productos.stream()
 						.map( producto -> new Item(producto, 1))
@@ -35,7 +35,7 @@ public class ItemServiceImpl implements ItemService{
 		Map<String, String> pathVariable = new HashMap<String, String>();
 		pathVariable.put("id", id.toString());
 		
-		Producto producto = clienteRest.getForObject("http://localhost:8001/ver/{id}", Producto.class, pathVariable);
+		Producto producto = clienteRest.getForObject("http://servicio-producto/ver/{id}", Producto.class, pathVariable);
 		
 		return new Item(producto, cantidad);
 	}
