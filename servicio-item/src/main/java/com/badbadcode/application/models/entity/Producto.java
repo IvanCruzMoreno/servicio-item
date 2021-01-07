@@ -1,4 +1,4 @@
-package com.badbadcode.application.models;
+package com.badbadcode.application.models.entity;
 
 import java.util.Date;
 
