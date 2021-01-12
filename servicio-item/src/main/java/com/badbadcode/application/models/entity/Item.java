@@ -1,5 +1,7 @@
 package com.badbadcode.application.models.entity;
 
+import com.badbadcode.application.commons.models.entity.Producto;
+
 public class Item {
 
 	private Producto producto;

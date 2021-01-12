@@ -2,8 +2,9 @@ package com.badbadcode.application.models.service;
 
 import java.util.List;
 
+import com.badbadcode.application.commons.models.entity.Producto;
 import com.badbadcode.application.models.entity.Item;
-import com.badbadcode.application.models.entity.Producto;
+
 
 public interface ItemService {
 

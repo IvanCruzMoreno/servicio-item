@@ -7,8 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.badbadcode.application.clientes.ProductoClienteRest;
+import com.badbadcode.application.commons.models.entity.Producto;
 import com.badbadcode.application.models.entity.Item;
-import com.badbadcode.application.models.entity.Producto;
+
 
 @Service("serviceFeign")
 public class ItemServiceFeign implements ItemService {
